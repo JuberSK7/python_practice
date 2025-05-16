@@ -1,825 +1,640 @@
 # 🐍 50 Simple Python Programs for Absolute Beginners
 
+# Python Questions & Answers
 
-1) How to print “Hello World” on Python?
+### 1. How to print “Hello World” in Python?
+```python
 print("Hello World")
+```
 
-
-2) How to print “Hello + Username” with the user’s name on Python?
+### 2. How to print “Hello + Username” with the user’s name?
+```python
 usertext = input("What is your name? ")
 print("Hello", usertext)
+```
 
-
-3) How to add 2 numbers entered on Python?
+### 3. How to add 2 numbers entered by the user?
+```python
 num1 = input('Enter first number: ')
 num2 = input('Enter second number: ')
-
 sum = float(num1) + float(num2)
-
 print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+```
 
-
-
-4) How to find the Average of 2 Entered Numbers on Python?
+### 4. How to find the average of 2 numbers?
+```python
 num1 = input('Enter first number: ')
 num2 = input('Enter second number: ')
+average = (int(num1) + int(num2)) / 2
+print('Average: {0}'.format(average))
+```
 
-average =(int(num1) + int(num2))
+### 5. How to calculate the entered Visa and Final Grade Average?
+```python
+visagrade = input('Enter your visa grade: ')
+finalgrade = input('Enter your final grade: ')
+average = (float(visagrade) * 0.3) + (float(finalgrade) * 0.7)
+print("Average: {0}".format(average))
+```
 
-print('average:{0} '.format(average))
+### 6. How to find the average of 3 written grades?
+```python
+firstexam = input('Your first exam: ')
+secondexam = input('Your second exam: ')
+thirdexam = input('Your third exam: ')
+average = (float(firstexam) + float(secondexam) + float(thirdexam)) / 3
+print("Average: {0}".format(average))
+```
 
-
-5) How to calculate the Entered Visa and Final Grade Average on Python?
-visagrade = input('enter your visa grade : ')
-finalgrade = input('enter your final grade : ')
-average =(float(visagrade)*0.3)+(float(finalgrade)*0.7)
-print("average :{0} ".format(average))
-
-
-6) How to find the Average of 3 Written Grades entered on Python?
-firstexam = input('your first exam : ')
-secondexam = input('your second exam : ')
-thirdexam = input('your third exam : ')
-average =(float(firstexam)+float(secondexam)+float(thirdexam))/3
-print("average :{0} ".format(average))
-
-
-7) How to show the Class Pass Status (PASSED — FAILED) of the Student whose Written Average Has Been Entered on Python?
-average = input('enter average : ')
-if(int(average)>=50):
-print("Passed")
+### 7. How to show class pass status (PASSED / FAILED)?
+```python
+average = input('Enter average: ')
+if int(average) >= 50:
+    print("Passed")
 else:
-print("Failed")
+    print("Failed")
+```
 
-
-8) How to find out if the entered number is odd or even on Python?
+### 8. How to check if a number is odd or even?
+```python
 num = int(input("Enter a number: "))
 if (num % 2) == 0:
-   print("{0} is Even".format(num))
+    print("{0} is Even".format(num))
 else:
-   print("{0} is Odd".format(num))
+    print("{0} is Odd".format(num))
+```
 
-   
-9) How to find out if the entered number is Positive, Negative, or 0 on Python?
+### 9. How to check if a number is positive, negative, or zero?
+```python
 num = float(input("Enter a number: "))
 if num > 0:
-   print("Positive number")
+    print("Positive number")
 elif num == 0:
-   print("Zero")
+    print("Zero")
 else:
-   print("Negative number")
+    print("Negative number")
+```
 
-   
-10) How to calculate body mass index on Python?
-print("body mass index calculation program")
-height = float(input("enter height (m):"))
-weight = int(input("enter weight (kg):"))
+### 10. How to calculate body mass index?
+```python
+print("Body Mass Index Calculation Program")
+height = float(input("Enter height (m): "))
+weight = int(input("Enter weight (kg): "))
+index = weight / (height * height)
 
-index  = weight/(height*height)
-
-if index <=18:
-    print("\n underweight BMİ:{}".format(index))
-elif index > 18 and index <=25 :
-    print("\n overweight BMİ:{}".format(index))
-elif index > 25 and index <=30:
-    print("\n obese BMİ:{}".format(index))
-elif index > 30:
-    print("\n severely obese BMİ:{}".format(index))
-
-
-11) How to show if the person whose age is entered can get a driver’s license on Python?
-age = input('enter age : ')
-if(int(age)<18):
-print("Your Age Is Not Eligible To Get A Driver's License")
+if index <= 18:
+    print("\nUnderweight BMI: {}".format(index))
+elif index <= 25:
+    print("\nNormal BMI: {}".format(index))
+elif index <= 30:
+    print("\nOverweight BMI: {}".format(index))
 else:
-print("Your Age Is Eligible To Get Your License")
+    print("\nObese BMI: {}".format(index))
+```
 
+### 11. Can the person get a driver's license based on their age?
+```python
+age = input('Enter age: ')
+if int(age) < 18:
+    print("Not eligible for a driver's license")
+else:
+    print("Eligible for a driver's license")
+```
 
-13) How to List Numbers 1–100 on the Screen on Python?
-for i in range(1,101):
-print(i)
+### 12. How to list numbers from 1 to 100?
+```python
+for i in range(1, 101):
+    print(i)
+```
 
+### 13. How to list even numbers from 1 to 100?
+```python
+for i in range(1, 101):
+    if i % 2 == 0:
+        print(i)
+```
 
-13) How to List Even Numbers 1–100 on Python?
-for i in range(1,101):
-if i%2==0:
-print(i)
+### 14. How to list odd numbers from 1 to 100?
+```python
+for i in range(1, 101):
+    if i % 2 != 0:
+        print(i)
+```
 
+### 15. How to find numbers between 1 and 100 divisible by 3 or 5?
+```python
+for i in range(1, 101):
+    if i % 3 == 0 or i % 5 == 0:
+        print(i)
+```
 
-14) How to List Odd Numbers from 1–100 on Python?
-for i in range(1,101):
-if i%2!=0:
-print(i)
+### 16. How to list numbers from 1 to a user-entered number?
+```python
+num = input('Enter number: ')
+for i in range(1, int(num) + 1):
+    print(i)
+```
 
+### 17. How to find the area and perimeter of a rectangle?
+```python
+short = input('Enter short side: ')
+tall = input('Enter tall side: ')
+area = int(short) * int(tall)
+perimeter = 2 * (int(short) + int(tall))
+print("Area: {0}".format(area))
+print("Perimeter: {0}".format(perimeter))
+```
 
-15) How to find numbers between 1 and 100 that are divided by 3 and 5 on Python?
-for i in range(1,101):
-if i%3==0 or i%5==0:
-print(i)
-
-16) How to list Numbers from 1 to User-Entered Number on Python?
-num = input('enter number : ')
-for i in range(1,int(num)+1):
-print(i)
-
-17) How to find the Area and Perimeter of a Rectangle With Its Sides on Python?
-short = input('Enter short side : ')
-tall = input('Enter tall side : ')
-area = int(short)*int(tall)
-perimeter =2*(int(short)+int(tall))
-print("area: {0}".format(alan))
-print("perimeter: {0}".format(cevre))
-
-
-18) How to print the letters of the entered text one under the other on Python?
-word = 'mrhuseyin'
+### 18. How to print the letters of a word one per line?
+```python
+word = input("Enter a word: ")
 for char in word:
     print(char)
+```
 
-    
-19) How to show the sum of numbers between two numbers the user has entered on Python?
-sumofnumbers=0;
-num1 = input('first number: ')
-num2 = input('second number: ')
-for i in range(int(sayi1)+1,int(sayi2)):
-sumofnumbers+=i
-print("Sum of numbers between {0} and {1} : {2}".format(num1,num2,sumofnumbers))
+### 19. How to find the sum of numbers between two numbers?
+```python
+sumofnumbers = 0
+num1 = int(input('First number: '))
+num2 = int(input('Second number: '))
+for i in range(num1 + 1, num2):
+    sumofnumbers += i
+print("Sum of numbers between {0} and {1}: {2}".format(num1, num2, sumofnumbers))
+```
 
-For example, let’s ask the user about their choice of cinema or theater. You have to pay 10 dollars to watch movies and 5 dollars for theater. We think that students get 50% discount. If the student is discounted; If he is not a student, let’s write a document that calculates the non-discounted amount and prints it.
-selection = input("Press (1) for Cinema, (2) for Theater : ")
-student = input("Are you student(Y/N) : ")
+### 20. Cinema or Theater Fee with Student Discount
+```python
+selection = input("Press (1) for Cinema, (2) for Theater: ")
+student = input("Are you a student (Y/N)? ")
 price = 0
-#non-discounted fee calculation
+
 if selection == '1':
-price = 10 #cinema
+    price = 10
 elif selection == '2':
-price = 5 #theatre
-#student discount
-if student =='Y' or student =='y':
-price=price / 2  #%50
-print(" The fee you have to pay :{}".format(price))
+    price = 5
 
+if student.lower() == 'y':
+    price = price / 2
 
+print("The fee you have to pay: {}".format(price))
+```
 
-20) How to find out if the entered number is Prime or Not on Python?
+### 21. How to check if a number is prime?
+```python
 num = int(input("Enter a number: "))
-
 if num > 1:
-   for i in range(2,num):
-       if (num % i) == 0:
-           print(num,"is not a prime number")
-           print(i,"times",num//i,"is",num)
-           break
-   else:
-       print(num,"is a prime number")
-
+    for i in range(2, num):
+        if (num % i) == 0:
+            print(num, "is not a prime number")
+            break
+    else:
+        print(num, "is a prime number")
 else:
-   print(num,"is not a prime number")
+    print(num, "is not a prime number")
+```
 
-
-   
-21) How to separately find the sum of odd and even numbers up to the number that the user has entered on Python?
+### 22. Sum of odd and even numbers from user input
+```python
 NumList = []
 Even_Sum = 0
 Odd_Sum = 0
 
-Number = int(input("Please enter the Total Number of List Elements: "))
+Number = int(input("Enter the total number of list elements: "))
 for i in range(1, Number + 1):
-    value = int(input("Please enter the Value of %d Element : " %i))
+    value = int(input("Enter value for element %d: " % i))
     NumList.append(value)
 
 for j in range(Number):
-    if(NumList[j] % 2 == 0):
-        Even_Sum = Even_Sum + NumList[j]
+    if NumList[j] % 2 == 0:
+        Even_Sum += NumList[j]
     else:
-        Odd_Sum = Odd_Sum + NumList[j]
+        Odd_Sum += NumList[j]
 
-print("\nThe Sum of Even Numbers in this List =  ", Even_Sum)
-print("The Sum of Odd Numbers in this List =  ", Odd_Sum)
+print("Sum of even numbers =", Even_Sum)
+print("Sum of odd numbers =", Odd_Sum)
+```
 
+### 23. Calculate increased salary based on raise rate
+```python
+salary = input("Enter current salary: ")
+raise_rate = input("Salary raise rate (%): ")
+new_salary = int(salary) + (int(salary) * int(raise_rate) / 100)
+print("Increased salary:", new_salary)
+```
 
-22) How to calculate the increased salary of the worker whose salary and raise rate is entered on Python?
-newsalary = 0
-salary = input("enter new salary : ")
-raise = input("salary raise rate(%) : ")
-newsalary = int(salary)+(int(salary)*int(raise)/100)
-print("increased salary :",newsalary)
-
-23) How to calculate the area and circumference of the circle whose radius is entered using the function on Python?
+### 24. Area and circumference of a circle using function
+```python
 import math
- 
+
 def find_Diameter(radius):
     return 2 * radius
- 
+
 def find_Circumference(radius):
     return 2 * math.pi * radius
- 
+
 def find_Area(radius):
     return math.pi * radius * radius
- 
-r = float(input(' Please Enter the radius of a circle: '))
- 
-diameter = find_Diameter(r)
-circumference = find_Circumference(r)
-area = find_Area(r)
- 
-print("\n Diameter Of a Circle = %.2f" %diameter)
-print(" Circumference Of a Circle = %.2f" %circumference)
-print(" Area Of a Circle = %.2f" %area)
 
-24) How to calculate the area of the rectangle, whose width and height are entered using the function on Python?
-def areaRectangle(a, b): 
-    return (a * b) 
-  
-def perimeterRectangle(a, b): 
-    return (2 * (a + b)) 
-a = 5; 
-b = 6; print ("Area = ", areaRectangle(a, b))
+r = float(input('Enter the radius: '))
+print("Diameter =", find_Diameter(r))
+print("Circumference =", find_Circumference(r))
+print("Area =", find_Area(r))
+```
 
-print ("Perimeter = ", perimeterRectangle(a, b))
+### 25. Area and perimeter of a rectangle using functions
+```python
+def areaRectangle(a, b):
+    return a * b
 
+def perimeterRectangle(a, b):
+    return 2 * (a + b)
 
+a = 5
+b = 6
+print("Area =", areaRectangle(a, b))
+print("Perimeter =", perimeterRectangle(a, b))
+```
 
-Making a Number Guessing Game with Python
+### 26. Number guessing game
+```python
 import random
 import math
-# Taking Inputs
-lower = int(input("Enter Lower bound:- "))
- 
-# Taking Inputs
-upper = int(input("Enter Upper bound:- "))
- 
-# generating random number between
-# the lower and upper
+
+lower = int(input("Enter lower bound: "))
+upper = int(input("Enter upper bound: "))
+
 x = random.randint(lower, upper)
-print("\n\tYou've only ", 
-       round(math.log(upper - lower + 1, 2)),
-      " chances to guess the integer!\n")
- 
-# Initializing the number of guesses.
+chances = round(math.log(upper - lower + 1, 2))
+print(f"You have {chances} chances to guess the number!")
+
 count = 0
- 
-# for calculation of minimum number of
-# guesses depends upon range
-while count < math.log(upper - lower + 1, 2):
+while count < chances:
     count += 1
- 
-    # taking guessing number as input
-    guess = int(input("Guess a number:- "))
- 
-    # Condition testing
+    guess = int(input("Guess a number: "))
+
     if x == guess:
-        print("Congratulations you did it in ",
-              count, " try")
-        # Once guessed, loop will break
+        print(f"Congratulations! You did it in {count} tries.")
         break
     elif x > guess:
-        print("You guessed too small!")
-    elif x < guess:
-        print("You Guessed too high!")
- 
-# If Guessing is more than required guesses,
-# shows this output.
-if count >= math.log(upper - lower + 1, 2):
-    print("\nThe number is %d" % x)
-    print("\tBetter Luck Next time!")
+        print("You guessed too low!")
+    else:
+        print("You guessed too high!")
 
-    
-25) How to find out what day of the year a given date is on Python?
+if count >= chances and x != guess:
+    print(f"The number was {x}. Better luck next time!")
+```
+
+### 27. What day of the week is a given date?
+```python
 import datetime
 
-date=str(input('Enter the date(for example:09 02 2019):'))
-day_name= ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday']
+date = input('Enter a date (DD MM YYYY): ')
+day_name = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 day = datetime.datetime.strptime(date, '%d %m %Y').weekday()
 print(day_name[day])
+```
 
+### 28. Find missing numbers in a sorted list
+```python
+def find_missing(lst):
+    return [x for x in range(lst[0], lst[-1] + 1) if x not in lst]
 
-26) How to find missing numbers in a sorted list range on Python?
-def find_missing(lst): 
-    return [x for x in range(lst[0], lst[-1]+1)  
-                               if x not in lst] 
-  
-# Driver code 
-lst = [1, 2, 4, 6, 7, 9, 10] 
+lst = [1, 2, 4, 6, 7, 9, 10]
 print(find_missing(lst))
-Output:
-[3, 5, 8]
+```
 
-
-
-27) How to check if there is a specified character in a string on Python?
-char_list = ["a", "b" ,"c"]
+### 29. Check if a string contains specific characters
+```python
+char_list = ["a", "b", "c"]
 string = "abcd"
-matched_list = [characters in char_list for characters in string]
+matched_list = [char in char_list for char in string]
 print(matched_list)
-OUTPUT
-[True, True, True, False]
+
 string_contains_chars = all(matched_list)
 print(string_contains_chars)
+```
+---
 
-28) How to find the average of odd and even averages of whole numbers on Python?
-total = 0
-evenSums = 0
-oddSums = 0
-done = False
-while(not done):
-    user_in = input("Give me an integer or type 'done' to be done.")
-    if( user_in.lower() == "done"):
-        done = True
-    else:
-        # assuming they've typed in an integer
-        total += int(user_in)
-        if user_in % 2 == 0:
-            evenSums += user_in
-            evenAverage = evenSums / user_in
-        else:
-            oddSums += user_in
-            oddAverage = oddSums / user_in
-print(total)
-print("Even Average: " + str(evenAverage))
-print("Odd Average: " + str(oddAverage))
+### 32. How to insert records into a MySQL database on Python?
 
-
-29) How to put records from the database on Python?
+```python
 import pymysql.cursors
-# Database connection sentence
-connection = pymysql.connect(host='localhost',
-                             user='root',
-                             password='',
-                             db='students',
-                             charset='utf8mb4',
-                             cursorclass=pymysql.cursors.DictCursor)
+
+connection = pymysql.connect(
+    host='localhost',
+    user='root',
+    password='',
+    db='students',
+    charset='utf8mb4',
+    cursorclass=pymysql.cursors.DictCursor
+)
+
 try:
     with connection.cursor() as cursor:
-        # single line reading
-        sql = "SELECT `id`, `firstname`,`lastname` FROM `users`"
-        cursor.execute(sql)
-        for row in cursor.fetchall():
-            #read all lines
-            firstname = str(row["firstname"])
-            lastname = str(row["lastname"])
-            #print on screen
-             print("firstname : " + firstname)
-             print("lastname : " + lastname)
+        sql = "INSERT INTO `users` (`firstname`, `lastname`) VALUES (%s, %s)"
+        firstname = input("Enter first name: ")
+        lastname = input("Enter last name: ")
+        cursor.execute(sql, (firstname, lastname))
+        connection.commit()
+        print("User added successfully.")
 finally:
-        connection.close()
-        
+    connection.close()
+```
 
-30) How to Use Tkinter Form on Python?
-from tkinter import *
-window = Tk()
-# add widgets here
+---
 
-window.title('Hello Python')
-window.geometry("300x200+10+20")
-window.mainloop()
+### 33. How to update records in a MySQL database on Python?
 
+```python
+import pymysql.cursors
 
+connection = pymysql.connect(
+    host='localhost',
+    user='root',
+    password='',
+    db='students',
+    charset='utf8mb4',
+    cursorclass=pymysql.cursors.DictCursor
+)
 
-How to Create Python Form Entry on Python?
-from tkinter import *
-from tkinter import messagebox
-window = Tk()
-window.title("mrhuseyin.medium.com")
-window.geometry("400x300")
-#plotting grid forms
-application = Frame(window)
-application.grid()
-L1 = Label(uygulama, text="Enter your name")
-L1.grid(padx=110, pady=10)
-E1 = Entry(application, bd =2)
-E1.grid(padx=110, pady=3)
-#draw form
-window.mainloop()
+try:
+    with connection.cursor() as cursor:
+        user_id = input("Enter user ID to update: ")
+        new_firstname = input("Enter new first name: ")
+        sql = "UPDATE `users` SET `firstname` = %s WHERE `id` = %s"
+        cursor.execute(sql, (new_firstname, user_id))
+        connection.commit()
+        print("Record updated successfully.")
+finally:
+    connection.close()
+```
 
+---
 
-31) How to create Python Tkinter ListBox on Python?
-from tkinter import *
- 
-from tkinter import messagebox
- 
-window = Tk()
- 
-window.title("mrhuseyin.medium.com")
-window.geometry("400x300")
- 
-#grid form çizdirme
-application = Frame(window)
-application.grid()
- 
- 
-Lb1 = Listbox(application)
-Lb1.insert(1, "Python")
-Lb1.insert(2, "C#")
-Lb1.insert(3, "JAVA")
-Lb1.insert(4, "JAVASCRIPT")
-Lb1.grid(padx=110, pady=10)
- 
-#draw form
-pencere.mainloop()
+### 34. How to delete records from a MySQL database on Python?
 
+```python
+import pymysql.cursors
 
-32) How to make a simple registration form using Python Tkinter on Python?
-# import openpyxl and tkinter modules 
-from openpyxl import *
-from tkinter import *
-  
-# globally declare wb and sheet variable 
-  
-# opening the existing excel file 
-wb = load_workbook('C:\\Users\\Admin\\Desktop\\excel.xlsx') 
-  
-# create the sheet object 
-sheet = wb.active 
-  
-  
-def excel(): 
-      
-    # resize the width of columns in 
-    # excel spreadsheet 
-    sheet.column_dimensions['A'].width = 30
-    sheet.column_dimensions['B'].width = 10
-    sheet.column_dimensions['C'].width = 10
-    sheet.column_dimensions['D'].width = 20
-    sheet.column_dimensions['E'].width = 20
-    sheet.column_dimensions['F'].width = 40
-    sheet.column_dimensions['G'].width = 50
-  
-    # write given data to an excel spreadsheet 
-    # at particular location 
-    sheet.cell(row=1, column=1).value = "Name"
-    sheet.cell(row=1, column=2).value = "Course"
-    sheet.cell(row=1, column=3).value = "Semester"
-    sheet.cell(row=1, column=4).value = "Form Number"
-    sheet.cell(row=1, column=5).value = "Contact Number"
-    sheet.cell(row=1, column=6).value = "Email id"
-    sheet.cell(row=1, column=7).value = "Address"
-  
-  
-# Function to set focus (cursor) 
-def focus1(event): 
-    # set focus on the course_field box 
-    course_field.focus_set() 
-  
-  
-# Function to set focus 
-def focus2(event): 
-    # set focus on the sem_field box 
-    sem_field.focus_set() 
-  
-  
-# Function to set focus 
-def focus3(event): 
-    # set focus on the form_no_field box 
-    form_no_field.focus_set() 
-  
-  
-# Function to set focus 
-def focus4(event): 
-    # set focus on the contact_no_field box 
-    contact_no_field.focus_set() 
-  
-  
-# Function to set focus 
-def focus5(event): 
-    # set focus on the email_id_field box 
-    email_id_field.focus_set() 
-  
-  
-# Function to set focus 
-def focus6(event): 
-    # set focus on the address_field box 
-    address_field.focus_set() 
-  
-  
-# Function for clearing the 
-# contents of text entry boxes 
-def clear(): 
-      
-    # clear the content of text entry box 
-    name_field.delete(0, END) 
-    course_field.delete(0, END) 
-    sem_field.delete(0, END) 
-    form_no_field.delete(0, END) 
-    contact_no_field.delete(0, END) 
-    email_id_field.delete(0, END) 
-    address_field.delete(0, END) 
-  
-  
-# Function to take data from GUI  
-# window and write to an excel file 
-def insert(): 
-      
-    # if user not fill any entry 
-    # then print "empty input" 
-    if (name_field.get() == "" and
-        course_field.get() == "" and
-        sem_field.get() == "" and
-        form_no_field.get() == "" and
-        contact_no_field.get() == "" and
-        email_id_field.get() == "" and
-        address_field.get() == ""): 
-              
-        print("empty input") 
-  
-    else: 
-  
-        # assigning the max row and max column 
-        # value upto which data is written 
-        # in an excel sheet to the variable 
-        current_row = sheet.max_row 
-        current_column = sheet.max_column 
-  
-        # get method returns current text 
-        # as string which we write into 
-        # excel spreadsheet at particular location 
-        sheet.cell(row=current_row + 1, column=1).value = name_field.get() 
-        sheet.cell(row=current_row + 1, column=2).value = course_field.get() 
-        sheet.cell(row=current_row + 1, column=3).value = sem_field.get() 
-        sheet.cell(row=current_row + 1, column=4).value = form_no_field.get() 
-        sheet.cell(row=current_row + 1, column=5).value = contact_no_field.get() 
-        sheet.cell(row=current_row + 1, column=6).value = email_id_field.get() 
-        sheet.cell(row=current_row + 1, column=7).value = address_field.get() 
-  
-        # save the file 
-        wb.save('C:\\Users\\Admin\\Desktop\\excel.xlsx') 
-  
-        # set focus on the name_field box 
-        name_field.focus_set() 
-  
-        # call the clear() function 
-        clear() 
-  
-  
-# Driver code 
-if __name__ == "__main__": 
-      
-    # create a GUI window 
-    root = Tk() 
-  
-    # set the background colour of GUI window 
-    root.configure(background='light green') 
-  
-    # set the title of GUI window 
-    root.title("registration form") 
-  
-    # set the configuration of GUI window 
-    root.geometry("500x300") 
-  
-    excel() 
-  
-    # create a Form label 
-    heading = Label(root, text="Form", bg="light green") 
-  
-    # create a Name label 
-    name = Label(root, text="Name", bg="light green") 
-  
-    # create a Course label 
-    course = Label(root, text="Course", bg="light green") 
-  
-    # create a Semester label 
-    sem = Label(root, text="Semester", bg="light green") 
-  
-    # create a Form No. lable 
-    form_no = Label(root, text="Form No.", bg="light green") 
-  
-    # create a Contact No. label 
-    contact_no = Label(root, text="Contact No.", bg="light green") 
-  
-    # create a Email id label 
-    email_id = Label(root, text="Email id", bg="light green") 
-  
-    # create a address label 
-    address = Label(root, text="Address", bg="light green") 
-  
-    # grid method is used for placing 
-    # the widgets at respective positions 
-    # in table like structure . 
-    heading.grid(row=0, column=1) 
-    name.grid(row=1, column=0) 
-    course.grid(row=2, column=0) 
-    sem.grid(row=3, column=0) 
-    form_no.grid(row=4, column=0) 
-    contact_no.grid(row=5, column=0) 
-    email_id.grid(row=6, column=0) 
-    address.grid(row=7, column=0) 
-  
-    # create a text entry box 
-    # for typing the information 
-    name_field = Entry(root) 
-    course_field = Entry(root) 
-    sem_field = Entry(root) 
-    form_no_field = Entry(root) 
-    contact_no_field = Entry(root) 
-    email_id_field = Entry(root) 
-    address_field = Entry(root) 
-  
-    # bind method of widget is used for 
-    # the binding the function with the events 
-  
-    # whenever the enter key is pressed 
-    # then call the focus1 function 
-    name_field.bind("<Return>", focus1) 
-  
-    # whenever the enter key is pressed 
-    # then call the focus2 function 
-    course_field.bind("<Return>", focus2) 
-  
-    # whenever the enter key is pressed 
-    # then call the focus3 function 
-    sem_field.bind("<Return>", focus3) 
-  
-    # whenever the enter key is pressed 
-    # then call the focus4 function 
-    form_no_field.bind("<Return>", focus4) 
-  
-    # whenever the enter key is pressed 
-    # then call the focus5 function 
-    contact_no_field.bind("<Return>", focus5) 
-  
-    # whenever the enter key is pressed 
-    # then call the focus6 function 
-    email_id_field.bind("<Return>", focus6) 
-  
-    # grid method is used for placing 
-    # the widgets at respective positions 
-    # in table like structure . 
-    name_field.grid(row=1, column=1, ipadx="100") 
-    course_field.grid(row=2, column=1, ipadx="100") 
-    sem_field.grid(row=3, column=1, ipadx="100") 
-    form_no_field.grid(row=4, column=1, ipadx="100") 
-    contact_no_field.grid(row=5, column=1, ipadx="100") 
-    email_id_field.grid(row=6, column=1, ipadx="100") 
-    address_field.grid(row=7, column=1, ipadx="100") 
-  
-    # call excel function 
-    excel() 
-  
-    # create a Submit Button and place into the root window 
-    submit = Button(root, text="Submit", fg="Black", 
-                            bg="Red", command=insert) 
-    submit.grid(row=8, column=1) 
-  
-    # start the GUI 
-    root.mainloop()
+connection = pymysql.connect(
+    host='localhost',
+    user='root',
+    password='',
+    db='students',
+    charset='utf8mb4',
+    cursorclass=pymysql.cursors.DictCursor
+)
 
+try:
+    with connection.cursor() as cursor:
+        user_id = input("Enter user ID to delete: ")
+        sql = "DELETE FROM `users` WHERE `id` = %s"
+        cursor.execute(sql, (user_id,))
+        connection.commit()
+        print("User deleted successfully.")
+finally:
+    connection.close()
+```
 
-    
-33) How to make a game that guesses the number the user holds on Python?
-from random import randint
- 
-rand = randint(1, 100)
-counter = 0
- 
-while True:
-    counter+=1
-    num=int(input("Enter values between 1 and 100 (0 exit):"))
-    if(num==0):
-        print("You canceled the game.")
-        break
-    elif num < rand:
-        print("Enter a Higher Number.")
-        continue
-    elif num > rand:
-        print("Enter a Lower Number.")
-        continue
-    else:
-        print("Randomly selected number {0}!".format(rand))
-        print("Your guess number {0}".format(counter))
+---
 
+### 35. How to create a login form using Python and MySQL?
 
-        
-34) How to make a list of your favorite fruits and print them on the screen on Python?
-favorite_fruits = ['apples', 'erics', 'oranges']
-print("My favourite fruits {}".format(favorite_fruits))
+```python
+import pymysql.cursors
 
+connection = pymysql.connect(
+    host='localhost',
+    user='root',
+    password='',
+    db='students',
+    charset='utf8mb4',
+    cursorclass=pymysql.cursors.DictCursor
+)
 
-35) How to print “the number of pi in order, the equivalent of the inch unit in cm, the abbreviation of microprocessors, the name of the operating system you are using” on Python?
-list=[3.14,2.54,"CPU","WINDOWS 10"]
- 
-print(list)
-Output:
-[3.14, 2.54, 'CPU', 'WINDOWS 10']
+try:
+    with connection.cursor() as cursor:
+        username = input("Enter username: ")
+        password = input("Enter password: ")
+        sql = "SELECT * FROM `users` WHERE `username` = %s AND `password` = %s"
+        cursor.execute(sql, (username, password))
+        result = cursor.fetchone()
+        if result:
+            print("Login successful!")
+        else:
+            print("Invalid username or password.")
+finally:
+    connection.close()
+```
 
+---
 
-36) How to make a list of the days of the week beginning with Monday and ending with Friday. Also, how to print the element of the list you have created with an index of 4 on the screen on Python?
-weekdays=["Monday","Tuesday","Wednesday","Thursday","Friday"]
-print(weekdays[4])
-output
-Thursday
+### 36. How to create a Tkinter form with two input fields?
 
+```python
+import tkinter as tk
 
-37) How to change the list from 3,1,2 values to 1,1,2 respectively on Python?
-list=[3,1,2]
- 
-list[0]=1
-list[1]=1
-list[2]=2
- 
-print(list)
-output
-[1, 1, 2]
+def show_data():
+    print("Name:", name_entry.get())
+    print("Age:", age_entry.get())
 
+root = tk.Tk()
+root.title("Simple Form")
 
-38) How to make a list of the week’s names and check if some days are on the list on Python?
-weekdays=["Monday","Tuesday","Wednesday","Thursday","Friday"]
- 
-print("Friday" in weekdays)
-print("Saturday" in weekdays)
-output
-true
-false
+tk.Label(root, text="Name:").grid(row=0, column=0)
+tk.Label(root, text="Age:").grid(row=1, column=0)
 
+name_entry = tk.Entry(root)
+age_entry = tk.Entry(root)
 
-39) How to print even numbers in a list on Python?
-list1 = [10, 21, 4, 45, 66, 93] 
-  
-for num in list1: 
-      
-    # checking condition 
-    if num % 2 == 0: 
-       print(num, end = " ")
+name_entry.grid(row=0, column=1)
+age_entry.grid(row=1, column=1)
 
-       
-40)  Create a list named numbers consisting of 3–18 numbers. Combine the list created with the list of “numbers2 = [21,22,23,24,25]”, then print the numbers divided by 4 on the screen.
-numbers = [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
-numbers2 = [21,22,23,24,25]
-combine = numbers + numbers2
- 
-for number in combine:
- if sayi%4==0:
-  print(number)
+submit_btn = tk.Button(root, text="Submit", command=show_data)
+submit_btn.grid(row=2, column=1)
 
-  
-41) How to write the code with the screen output as below with the while loop on Python?
-1 . class
-2 . class
-3 . class
-4 . class
-5 . class
-6 . class
-7 . class
-8 . class
-9 . class
-10 . class
-11 . class
-12 . class
-i = 1
-while i <= 12:
-  print(" {}. class".format(i))
-  i += 1
+root.mainloop()
+```
 
+---
 
-42)  How to sum the digits of the number the user entered on Python?
-number = input("enter a number: ")
-sum=0
-for numberofdigit in number:
-  sum += int(numberofdigit)
- 
-print("the sum of the digits of the number:",sum)
+### 37. How to create a list of squares using a list comprehension?
 
+```python
+squares = [x ** 2 for x in range(1, 11)]
+print("Squares from 1 to 10:", squares)
+```
 
-43) How to multiply the digits of the number entered by the user (except zero) on Python?
-number = input("enter an number: ")
-carpim=1
-for digitofnumber in str(numaber):
-  if int(digitofnumber) != 0:
-    multiplication*= int(digitofnumber)
-print("digits of the number: ",multiplication)
+---
 
+### 38. How to check if a string is a palindrome in Python?
 
-44) How to print the programmer’s name on the screen using the “for loop” on Python?
-text = input("enter a name: ")
- 
-for i in range(10):
-  print(text)
+```python
+def is_palindrome(s):
+    return s == s[::-1]
 
+string = input("Enter a string: ")
+if is_palindrome(string):
+    print("It's a palindrome.")
+else:
+    print("It's not a palindrome.")
+```
 
-  
-45)  How to print the programmer’s name on the screen using the “while loop” on Python?
-text = input("enter a name: ")
- 
-i=0
-while i<10:
-  i+=1
-  print(text)
+---
+
+### 39. How to find the factorial of a number using recursion?
+
+```python
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+num = int(input("Enter a number: "))
+print(f"Factorial of {num} is {factorial(num)}")
+```
+
+---
+
+### 40. How to use `try` and `except` blocks in Python?
+
+```python
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+except ValueError:
+    print("Invalid input! Please enter a number.")
+```
+
+---
+
+### 41. How to generate a random password in Python?
+
+```python
+import random
+import string
+
+def generate_password(length=8):
+    chars = string.ascii_letters + string.digits + string.punctuation
+    return ''.join(random.choice(chars) for _ in range(length))
+
+print("Generated password:", generate_password(12))
+```
+
+---
+
+### 42. How to count vowels in a string in Python?
+
+```python
+def count_vowels(s):
+    return sum(1 for char in s.lower() if char in "aeiou")
+
+text = input("Enter text: ")
+print("Number of vowels:", count_vowels(text))
+```
+
+---
+
+### 43. How to reverse words in a sentence?
+
+```python
+sentence = input("Enter a sentence: ")
+words = sentence.split()
+reversed_sentence = ' '.join(reversed(words))
+print("Reversed sentence:", reversed_sentence)
+```
+
+---
+
+### 44. How to merge two dictionaries in Python?
+
+```python
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 3, 'c': 4}
+merged = {**dict1, **dict2}
+print("Merged dictionary:", merged)
+```
+
+---
+
+### 45. How to remove duplicates from a list in Python?
+
+```python
+my_list = [1, 2, 2, 3, 4, 4, 5]
+unique_list = list(set(my_list))
+print("Unique list:", unique_list)
+```
+
+---
+
+### 46. How to find the largest number in a list?
+
+```python
+numbers = [10, 45, 32, 67, 2]
+print("Largest number is:", max(numbers))
+```
+
+---
+
+### 47. How to find the second largest number in a list?
+
+```python
+numbers = [10, 45, 32, 67, 2]
+unique_numbers = list(set(numbers))
+unique_numbers.sort()
+print("Second largest number is:", unique_numbers[-2])
+```
+
+---
+
+### 48. How to read a text file line by line in Python?
+
+```python
+with open("sample.txt", "r") as file:
+    for line in file:
+        print(line.strip())
+```
+
+---
+
+### 49. How to write user input to a text file?
+
+```python
+with open("output.txt", "w") as file:
+    text = input("Enter something to write to the file: ")
+    file.write(text)
+    print("Text written to output.txt")
+```
+
+---
+
+### 50. How to create a basic calculator using functions?
+
+```python
+def add(x, y): return x + y
+def subtract(x, y): return x - y
+def multiply(x, y): return x * y
+def divide(x, y): return x / y if y != 0 else "Cannot divide by zero"
+
+print("Options: +, -, *, /")
+a = float(input("Enter first number: "))
+op = input("Enter operator: ")
+b = float(input("Enter second number: "))
+
+if op == '+':
+    print("Result:", add(a, b))
+elif op == '-':
+    print("Result:", subtract(a, b))
+elif op == '*':
+    print("Result:", multiply(a, b))
+elif op == '/':
+    print("Result:", divide(a, b))
+else:
+    print("Invalid operator.")
+```
 
 
 
-
-46)  How to find the mean using “sum() and len()” on Python?
-list=[35,48,52,57,68,84]
- 
-total = sum(list)
-piece = len(list)
-print(total/piece)
-
-
-47) How to find the sum of numbers until 0 is entered on the keyboard on Python?
-total=0
-while True:
-  num = float(input("enter a number: "))
-  if numr ==0:
-    break
-  total+=num
-print("The sum of the numbers: ",total)
